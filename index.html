@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Bio Cá Nhân</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Trang bio của tuiiiiii</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -15,7 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #32CD32, #FF0000, #FFD700);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
         }
@@ -36,6 +36,9 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
         .avatar {
             width: 150px;
@@ -47,7 +50,7 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
         h1 {
-            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
             color: #e73c7e;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
             font-size: 2.5em;
@@ -55,7 +58,7 @@
         }
         p {
             color: #333;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 1.1em;
             max-width: 80%;
             margin: 0 auto 20px;
@@ -66,28 +69,38 @@
         .social-icons a {
             display: inline-block;
             margin: 0 10px;
-            font-size: 24px;
-            color: #23a6d5;
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: transform 0.3s ease;
         }
         .social-icons a:hover {
-            color: #e73c7e;
             transform: scale(1.2);
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://raw.githubusercontent.com/vinzcyun/vinzcyun.github.io/main/IMG_20240714_122355.webp" alt="Avatar" class="avatar">
-        <h1>Wyn</h1>
-        <p>hmmmmmmmmm.</p>
+        <img src="https://example.com/avatar.jpg" alt="Avatar" class="avatar">
+        <h1>wyn</h1>
+        <p>hmmmmmmmmmmmmm.</p>
         <div class="social-icons">
-            <a href="https://facebook.com/username" target="_blank">📘</a>
-            <a href="https://twitter.com/username" target="_blank">🐦</a>
-            <a href="https://instagram.com/username" target="_blank">📷</a>
-            <a href="https://linkedin.com/in/username" target="_blank">💼</a>
+            <a href="https://facebook.com/username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
+            <a href="https://t.me/username" target="_blank"><img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-icon-6896828_1280.png" alt="Telegram"></a>
+            <a href="https://github.com/username" target="_blank"><img src="https://s3.ap-south-1.amazonaws.com/artmantis-bucket/products/87EMuhBx48V1KR2ibAwQzNtD78VMAgV5fpymg1Z9aIlvzLhDKsGdTzRETgj32YBE.jpg" alt="GitHub"></a>
+            <a href="https://m.me/username" target="_blank"><img src="https://store-images.s-microsoft.com/image/apps.13171.9007199266726596.93d63a21-1e7a-4d3a-8c34-32a1018c1cd9.36e157b5-12fe-4810-8ebf-54fb360f4698" alt="Messenger"></a>
         </div>
     </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                var container = document.querySelector('.container');
+                container.style.opacity = '1';
+                container.style.transform = 'scale(1)';
+            }, 100);
+        }
+    </script>
 </body>
 </html>
