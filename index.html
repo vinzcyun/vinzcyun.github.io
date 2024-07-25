@@ -11,13 +11,13 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(120deg, #ff0000, #0000ff, #800080);
-            background-size: 200% 200%;
-            animation: gradient 10s ease infinite;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
         @keyframes gradient {
             0% {
@@ -31,22 +31,33 @@
             }
         }
         .navbar {
-            position: absolute;
+            position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .navbar:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
         .navbar .menu-icon,
         .navbar .search-icon {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .navbar .menu-icon:hover,
+        .navbar .search-icon:hover {
+            transform: scale(1.1);
         }
         .navbar .menu-icon {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg');
@@ -58,53 +69,59 @@
         }
         .container {
             max-width: 600px;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             opacity: 0;
-            transform: scale(0.9);
+            transform: translateY(20px);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
         .avatar {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .avatar:hover {
+            transform: scale(1.05);
         }
         h1 {
             font-weight: 700;
-            color: #e73c7e;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-size: 3em;
+            margin-bottom: 15px;
         }
         p {
-            color: #333;
+            color: #f0f0f0;
             font-weight: 400;
-            font-size: 1.1em;
+            font-size: 1.2em;
             max-width: 80%;
-            margin: 0 auto 20px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
         }
         .social-icons {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         .social-icons a {
             display: inline-block;
-            margin: 0 10px;
+            margin: 0 15px;
             transition: transform 0.3s ease;
         }
         .social-icons a:hover {
-            transform: scale(1.2);
+            transform: scale(1.2) rotate(5deg);
         }
         .social-icons img {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px; /* Thêm bo tròn góc */
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -116,7 +133,7 @@
     <div class="container">
         <img src="https://raw.githubusercontent.com/vinzcyun/vinzcyun.github.io/main/IMG_20240714_122355.webp" alt="Avatar" class="avatar">
         <h1>wyn</h1>
-        <p>hmmmmmmmmmmmmm.</p>
+        <p>Exploring the digital realm, one line of code at a time. Passionate about creating beautiful and functional web experiences.</p>
         <div class="social-icons">
             <a href="https://facebook.com/username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
             <a href="https://t.me/username" target="_blank"><img src="https://telegram.org/img/t_logo.png" alt="Telegram"></a>
@@ -130,7 +147,7 @@
             setTimeout(function() {
                 var container = document.querySelector('.container');
                 container.style.opacity = '1';
-                container.style.transform = 'scale(1)';
+                container.style.transform = 'translateY(0)';
             }, 100);
         }
     </script>
