@@ -15,9 +15,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #32CD32, #FF0000, #FFD700);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            background: linear-gradient(120deg, #ff0000, #0000ff, #800080);
+            background-size: 200% 200%;
+            animation: gradient 10s ease infinite;
         }
         @keyframes gradient {
             0% {
@@ -30,9 +30,36 @@
                 background-position: 0% 50%;
             }
         }
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .menu-icon,
+        .navbar .search-icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .navbar .menu-icon {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg');
+            background-size: cover;
+        }
+        .navbar .search-icon {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg');
+            background-size: cover;
+        }
         .container {
             max-width: 600px;
             background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -77,19 +104,24 @@
         .social-icons img {
             width: 40px;
             height: 40px;
+            border-radius: 10px; /* Thêm bo tròn góc */
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="menu-icon"></div>
+        <div class="search-icon"></div>
+    </div>
     <div class="container">
         <img src="https://raw.githubusercontent.com/vinzcyun/vinzcyun.github.io/main/IMG_20240714_122355.webp" alt="Avatar" class="avatar">
         <h1>wyn</h1>
         <p>hmmmmmmmmmmmmm.</p>
         <div class="social-icons">
             <a href="https://facebook.com/username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
-            <a href="https://t.me/username" target="_blank"><img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-icon-6896828_1280.png" alt="Telegram"></a>
-            <a href="https://github.com/username" target="_blank"><img src="https://static-00.iconduck.com/assets.00/github-light-icon-2048x1998-m3c0rgap.png" alt="GitHub"></a>
-            <a href="https://m.me/username" target="_blank"><img src="https://store-images.s-microsoft.com/image/apps.13171.9007199266726596.93d63a21-1e7a-4d3a-8c34-32a1018c1cd9.36e157b5-12fe-4810-8ebf-54fb360f4698" alt="Messenger"></a>
+            <a href="https://t.me/username" target="_blank"><img src="https://telegram.org/img/t_logo.png" alt="Telegram"></a>
+            <a href="https://github.com/username" target="_blank"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"></a>
+            <a href="https://m.me/username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_4_Logo.png" alt="Messenger"></a>
         </div>
     </div>
 
