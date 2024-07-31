@@ -3,32 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang bio của tuiiiiii</title>
+    <title>Trang bio của Duma</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
         }
         @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .navbar {
             position: fixed;
@@ -68,7 +58,8 @@
             background-size: cover;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
+            margin: 80px auto;
             background-color: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(20px);
             border-radius: 20px;
@@ -83,7 +74,8 @@
             height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 10px;
+            margin: 0 auto 20px;
+            display: block;
             border: 5px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
@@ -91,23 +83,34 @@
         .avatar:hover {
             transform: scale(1.1) rotate(2deg);
         }
-        h1 {
-            font-weight: 700;
+        h1, h2 {
+            text-align: center;
             color: #ffffff;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-            font-size: 3em;
+        }
+        h1 {
+            font-size: 2.5em;
             margin-bottom: 15px;
         }
-        p {
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+        p, ul {
             color: #f0f0f0;
-            font-weight: 400;
-            font-size: 1.2em;
-            max-width: 80%;
-            margin: 0 auto 30px;
+            font-size: 1.1em;
             line-height: 1.6;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
         }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
         .social-icons {
+            text-align: center;
             margin-top: 30px;
         }
         .social-icons a {
@@ -124,6 +127,23 @@
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
+        .tech-stack {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .tech-stack code {
+            display: inline-block;
+            margin: 5px;
+        }
+        .github-stats {
+            margin-top: 30px;
+        }
+        .github-stats img {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -133,8 +153,42 @@
     </div>
     <div class="container">
         <img src="https://raw.githubusercontent.com/vinzcyun/vinzcyun.github.io/main/IMG_20240714_122355.webp" alt="Avatar" class="avatar">
-        <h1>wyn</h1>
-        <p>Exploring the digital realm, one line of code at a time. Passionate about creating beautiful and functional web experiences.</p>
+        <h1>🎉 Xin chào, 👋 Tôi là Duma !😁😁</h1>
+        <ul>
+            <li>🎯 Mục tiêu chính của tôi là đi ngủ 😴</li>
+            <li>🌐 Tôi viết cái này bằng tiếng Việt không phải vì không biết tiếng Anh mà là vì tôi yêu nước😂😂</li>
+            <li>🗺️ Tôi sống ở Việt Nam nha!</li>
+            <li>🌱 Tuy là tôi không biết lập trình nhưng chắc chắn tôi sẽ học😅😅</li>
+            <li>📫 Cần hỗ trợ gì liên hệ qua email này nha: <a href="mailto:kesyrou@gmail.com">kesyrou@gmail.com</a></li>
+        </ul>
+        <h2>👩‍💻 Những thứ tôi sẽ học trong tương lai:</h2>
+        <div class="tech-stack">
+            <code><img height="24" alt="android" src="https://raw.githubusercontent.com/github/explore/main/topics/android/android.png" /></code>
+            <code><img height="24" alt="kotlin" src="https://raw.githubusercontent.com/github/explore/main/topics/kotlin/kotlin.png" /></code>
+            <code><img height="24" alt="jetpack compose" src="https://raw.githubusercontent.com/github/explore/main/topics/jetpack-compose/jetpack-compose.png" /></code>
+            <code><img height="24" alt="java" src="https://raw.githubusercontent.com/github/explore/main/topics/java/java.png" /></code>
+            <code><img height="24" alt="gradle" src="https://raw.githubusercontent.com/github/explore/main/topics/gradle/gradle.png" /></code>
+            <code><img height="24" alt="python" src="https://raw.githubusercontent.com/github/explore/main/topics/python/python.png" /></code>
+            <code><img height="24" alt="flutter" src="https://raw.githubusercontent.com/github/explore/main/topics/flutter/flutter.png" /></code>
+            <code><img height="24" alt="nodejs" src="https://raw.githubusercontent.com/github/explore/main/topics/nodejs/nodejs.png" /></code>
+            <code><img height="24" alt="typescript" src="https://raw.githubusercontent.com/github/explore/main/topics/typescript/typescript.png" /></code>
+            <code><img height="24" alt="react-native" src="https://raw.githubusercontent.com/github/explore/main/topics/react-native/react-native.png" /></code>
+            <code><img height="24" alt="ruby" src="https://raw.githubusercontent.com/github/explore/main/topics/ruby/ruby.png" /></code>
+            <code><img height="24" alt="docker" src="https://avatars.githubusercontent.com/u/7739233?s=200&v=4" /></code>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">
+            <img src="https://komarev.com/ghpvc/?username=vinzcyun" alt="Profile views" />
+        </p>
+        <h2>Danh hiệu</h2>
+        <div class="github-stats">
+            <img src="https://github-readme-stats.vercel.app/api?username=vinzcyun&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="vinzcyun's GitHub stats" />
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=vinzcyun&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" alt="GitHub Streak" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinzcyun&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20Languages" alt="Top Languages" />
+        </div>
+        <h2>Kho lưu trữ nổi bật</h2>
+        <div class="github-stats">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=vinzcyun&repo=githubcodespacesv2&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en" alt="Featured Repository" />
+        </div>
         <div class="social-icons">
             <a href="https://facebook.com/username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
             <a href="https://t.me/username" target="_blank"><img src="https://telegram.org/img/t_logo.png" alt="Telegram"></a>
