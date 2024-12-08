@@ -1,210 +1,111 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang bio của Duma</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        .navbar:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        .navbar .menu-icon,
-        .navbar .search-icon {
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .navbar .menu-icon:hover,
-        .navbar .search-icon:hover {
-            transform: scale(1.1);
-        }
-        .navbar .menu-icon {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg');
-            background-size: cover;
-        }
-        .navbar .search-icon {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg');
-            background-size: cover;
-        }
-        .container {
-            max-width: 800px;
-            margin: 80px auto;
-            background-color: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        .avatar {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            display: block;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-        .avatar:hover {
-            transform: scale(1.1) rotate(2deg);
-        }
-        h1, h2 {
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-        h2 {
-            font-size: 2em;
-            margin-top: 30px;
-        }
-        p, ul {
-            color: #f0f0f0;
-            font-size: 1.1em;
-            line-height: 1.6;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        .social-icons {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .social-icons a {
-            display: inline-block;
-            margin: 0 15px;
-            transition: transform 0.3s ease;
-        }
-        .social-icons a:hover {
-            transform: scale(1.2) rotate(5deg);
-        }
-        .social-icons img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .tech-stack {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .tech-stack code {
-            display: inline-block;
-            margin: 5px;
-        }
-        .github-stats {
-            margin-top: 30px;
-        }
-        .github-stats img {
-            width: 100%;
-            max-width: 500px;
-            margin: 10px auto;
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <div class="menu-icon"></div>
-        <div class="search-icon"></div>
-    </div>
-    <div class="container">
-        <img src="https://raw.githubusercontent.com/vinzcyun/vinzcyun.github.io/main/IMG_20240714_122355.webp" alt="Avatar" class="avatar">
-        <h1>🎉 Xin chào, 👋 Tôi là WYN !😁😁</h1>
-        <ul>
-            <li>🎯 Mục tiêu chính của tôi là đi ngủ 😴</li>
-            <li>🌐 Tôi viết cái này bằng tiếng Việt không phải vì không biết tiếng Anh mà là vì tôi yêu nước 😂😂</li>
-            <li>🗺️ Tôi sống ở Việt Nam nha!</li>
-            <li>🌱 Tuy là tôi không biết lập trình nhưng chắc chắn tôi sẽ học😅😅</li>
-            <li>📫 Cần hỗ trợ gì liên hệ qua email này nha: <a href="mailto:kesyrou@gmail.com">kesyrou@gmail.com</a></li>
-        </ul>
-        <h2>👩‍💻 Những thứ tôi sẽ học trong tương lai:</h2>
-        <div class="tech-stack">
-            <code><img height="24" alt="android" src="https://raw.githubusercontent.com/github/explore/main/topics/android/android.png" /></code>
-            <code><img height="24" alt="kotlin" src="https://raw.githubusercontent.com/github/explore/main/topics/kotlin/kotlin.png" /></code>
-            <code><img height="24" alt="jetpack compose" src="https://raw.githubusercontent.com/github/explore/main/topics/jetpack-compose/jetpack-compose.png" /></code>
-            <code><img height="24" alt="java" src="https://raw.githubusercontent.com/github/explore/main/topics/java/java.png" /></code>
-            <code><img height="24" alt="gradle" src="https://raw.githubusercontent.com/github/explore/main/topics/gradle/gradle.png" /></code>
-            <code><img height="24" alt="python" src="https://raw.githubusercontent.com/github/explore/main/topics/python/python.png" /></code>
-            <code><img height="24" alt="flutter" src="https://raw.githubusercontent.com/github/explore/main/topics/flutter/flutter.png" /></code>
-            <code><img height="24" alt="nodejs" src="https://raw.githubusercontent.com/github/explore/main/topics/nodejs/nodejs.png" /></code>
-            <code><img height="24" alt="typescript" src="https://raw.githubusercontent.com/github/explore/main/topics/typescript/typescript.png" /></code>
-            <code><img height="24" alt="react-native" src="https://raw.githubusercontent.com/github/explore/main/topics/react-native/react-native.png" /></code>
-            <code><img height="24" alt="ruby" src="https://raw.githubusercontent.com/github/explore/main/topics/ruby/ruby.png" /></code>
-            <code><img height="24" alt="docker" src="https://avatars.githubusercontent.com/u/7739233?s=200&v=4" /></code>
-        </div>
-        <p style="text-align: center; margin-top: 20px;">
-            <img src="https://komarev.com/ghpvc/?username=vinzcyun" alt="Profile views" />
-        </p>
-        <h2>Danh hiệu</h2>
-        <div class="github-stats">
-            <img src="https://github-readme-stats.vercel.app/api?username=vinzcyun&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true" alt="vinzcyun's GitHub stats" />
-            <img src="https://github-readme-streak-stats.herokuapp.com/?user=vinzcyun&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" alt="GitHub Streak" />
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinzcyun&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20Languages" alt="Top Languages" />
-        </div>
-        <h2>Kho lưu trữ nổi bật</h2>
-        <div class="github-stats">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=vinzcyun&repo=githubcodespacesv2&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en" alt="Featured Repository" />
-        </div>
-        <div class="social-icons">
-            <a href="https://facebook.com/username" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
-            <a href="http://t.me/username" target="_blank"><img src="https://telegram.org/img/t_logo.png" alt="Telegram"></a>
-            <a href="https://github.com/username" target="_blank"><img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="GitHub"></a>
-            <a href="https://m.me/username" target="_blank"><img src="https://store-images.s-microsoft.com/image/apps.13171.9007199266726596.93d63a21-1e7a-4d3a-8c34-32a1018c1cd9.36e157b5-12fe-4810-8ebf-54fb360f4698" alt="Messenger"></a>
-        </div>
-    </div>
 
-    <script>
-        window.onload = function() {
-            setTimeout(function() {
-                var container = document.querySelector('.container');
-                container.style.opacity = '1';
-                container.style.transform = 'translateY(0)';
-            }, 100);
-        }
-    </script>
+<head>
+
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+<!-- Dinh dang 1 su dung ten mau -->
+
+<table bgcolor="beige" width="100%">
+
+<tr><td>
+
+<h1 style="color:red" align="center"> Giới thiệu nhóm em</h1>
+
+<a href="gioi_thieu_nhom_em.html"
+
+target="iframe">Gioi thieu nhom em</a>
+
+( <a href="nhom_em.html" target="iframe">Nhom em </a>)
+
+<br>
+
+<iframe name="iframe" width="104" height="7">
+
+</iframe>
+
+<form>
+
+<label for=" hoten"><i> <p style="font-
+
+size:small">Họ và tên:</p></i>
+
+</label><input type="text" id="hoten" >
+
+<br><br>
+
+<label for="Uudiem"> <i>Ưu điểm:</i>
+
+</label> <input type="text" id="Uudiem" >
+
+<br><br>
+
+<label for="Khuyetdiem"><i>Khuyết điểm:</i>
+
+</label> <input type="text" id="khuyetdiem"
+
+<br><br>
+<label for="ngaysinh"> Ngày sinh:
+
+</label>
+
+<input type="date" id="ngaysinh">
+
+<br><br>
+
+<label> Giới tính: </label> <input
+
+type="radio" id="gioitinh1" name="gioitinh"
+
+value="nu"><b>Nữ </b>
+
+<input type="radio" id="gioitinh2"
+
+name="gioitinh" value="Nam" ><b>Nam</b>
+
+<br><br>
+
+<label> <u>Sở thích:</u></label>
+
+<br><br>
+
+<input type="checkbox" id="sothich1" name="sothich1" value="xemphim"> Xem phim
+
+<input type="checkbox" id="sothich2"
+
+name="sothich2" value="bongda"> Bóng đá
+
+<input type="checkbox" id="sothich3"
+
+name="sothich3" value="choigame">
+
+Chơi game
+
+<input type="checkbox" id="sothich4"
+
+name="sothich4" value="doctruyen" >
+
+Đọc truyện
+
+<br><br>
+
+<input type="submit" value="Gửi thông tin">
+
+</form>
+
+<a
+
+href="http://webcoban.vn/image/hugo.jpg">Clic k here</a>
+
+<br><br>
+
+
+<a href="https://www.facebook.com"><img src="http://webcoban.vn/image/sumo.jpg"></a> html><h2>- Bên dưới là một tấm hình:</h2>
+
+<img src="https://www.thepoetmagazine.org/wp- content/uploads/2024/05/meme-meo-10-diem- 768x768.jpg">
+
 </body>
-</html>
